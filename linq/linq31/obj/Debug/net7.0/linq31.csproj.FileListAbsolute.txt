@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\linq31\bin\Debug\net7.0\linq31.exe
+C:\Users\user\source\repos\linq31\bin\Debug\net7.0\linq31.deps.json
+C:\Users\user\source\repos\linq31\bin\Debug\net7.0\linq31.runtimeconfig.json
+C:\Users\user\source\repos\linq31\bin\Debug\net7.0\linq31.dll
+C:\Users\user\source\repos\linq31\bin\Debug\net7.0\linq31.pdb
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.AssemblyInfo.cs
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.dll
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\refint\linq31.dll
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.pdb
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\linq31.genruntimeconfig.cache
+C:\Users\user\source\repos\linq31\obj\Debug\net7.0\ref\linq31.dll

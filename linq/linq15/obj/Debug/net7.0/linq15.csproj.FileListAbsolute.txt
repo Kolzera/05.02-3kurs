@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\linq15\bin\Debug\net7.0\linq15.exe
+C:\Users\user\source\repos\linq15\bin\Debug\net7.0\linq15.deps.json
+C:\Users\user\source\repos\linq15\bin\Debug\net7.0\linq15.runtimeconfig.json
+C:\Users\user\source\repos\linq15\bin\Debug\net7.0\linq15.dll
+C:\Users\user\source\repos\linq15\bin\Debug\net7.0\linq15.pdb
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.AssemblyInfo.cs
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.dll
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\refint\linq15.dll
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.pdb
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\linq15.genruntimeconfig.cache
+C:\Users\user\source\repos\linq15\obj\Debug\net7.0\ref\linq15.dll
