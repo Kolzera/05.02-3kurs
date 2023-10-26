@@ -1,0 +1,35 @@
+E:\Tmp\DataBindingStore\DataBindingRelation\bin\Debug\Data\Northwind.mdb
+E:\Tmp\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.exe
+E:\Tmp\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.pdb
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\ResolveAssemblyReference.cache
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\Window1.baml
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\Window1.g.cs
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\App.g.cs
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_Content.g.cs
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_MarkupCompile.cache
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.g.resources
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.Properties.Resources.resources
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.csproj.GenerateResource.Cache
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.exe
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.pdb
+E:\Tmp\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.exe.config
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Tmp\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_MarkupCompile.lref
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\bin\Debug\Data\Northwind.mdb
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.exe.config
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.exe
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\bin\Debug\DataBindingRelation.pdb
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\Window1.g.cs
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\App.g.cs
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_Content.g.cs
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_MarkupCompile.cache
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation_MarkupCompile.lref
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\Window1.baml
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.g.resources
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.Properties.Resources.resources
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.csproj.GenerateResource.cache
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.exe
+C:\Users\user\Desktop\lecture 2\DataBindingStore\DataBindingRelation\obj\Debug\DataBindingRelation.pdb

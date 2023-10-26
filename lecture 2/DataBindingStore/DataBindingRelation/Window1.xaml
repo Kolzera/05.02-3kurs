@@ -1,0 +1,476 @@
+﻿<Window x:Class="DataBindingRelation.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="300" Width="300" 
+    Title="WPF и типизированный DataSet" 
+    MinHeight="300" 
+    MinWidth="300"
+    WindowStartupLocation="CenterScreen"
+        
+    xmlns:local="clr-namespace:DataBindingRelation"
+    >
+    <Window.Resources>
+        <SolidColorBrush x:Key="ControlColorBrush" 
+            Color="{x:Static SystemColors.ControlColor}" />
+    </Window.Resources>
+    <Grid Background="{StaticResource ResourceKey=ControlColorBrush}">
+        <TabControl>
+            <!-- Привязка к типизированному DataSet -->
+            <TabItem Header="Page1">
+                <Grid Name="grid1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center">ContactName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="0"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding}"
+                            DisplayMemberPath="ContactName"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Center">OrderDate</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="1"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders}"
+                            DisplayMemberPath="OrderDate"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center">ProductName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="2"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders/Orders_Order_Details_Extended}"
+                            DisplayMemberPath="ProductName"
+                            />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Margin="0,0,5,0">ShipName:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipName, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+
+                        <TextBlock Grid.Row="1">ShipAddress:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipAddress, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+
+                        <TextBlock Grid.Row="2">ShipCity:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCity, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+
+                        <TextBlock Grid.Row="3">ShipCountry:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCountry, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                           />
+                    </Grid>
+                </Grid>
+            </TabItem>
+            
+            <!-- Привязка к типизированному DataSet -->
+            <TabItem Header="Page2">
+                <Grid Name="grid2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center">ContactName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="0"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding}"
+                            DisplayMemberPath="ContactName"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Center">OrderDate</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="1"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders}"
+                            DisplayMemberPath="OrderDate"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center">ProductName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="2"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders/Orders_Order_Details_Extended}"
+                            DisplayMemberPath="ProductName"
+                            />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Margin="0,0,5,0">ShipName:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipName, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="1">ShipAddress:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipAddress, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="2">ShipCity:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCity, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="3">ShipCountry:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCountry, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                           />
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <!-- Привязка к нетипизированному DataSet -->
+            <TabItem Header="Page3">
+                <Grid Name="grid3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center">ContactName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="0"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding}"
+                            DisplayMemberPath="ContactName"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Center">OrderDate</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="1"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders}"
+                            DisplayMemberPath="OrderDate"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center">ProductName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="2"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Path=CustomersOrders/Orders_Order_Details_Extended}"
+                            DisplayMemberPath="ProductName"
+                            />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Margin="0,0,5,0">ShipName:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipName, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="1">ShipAddress:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipAddress, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="2">ShipCity:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCity, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="3">ShipCountry:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" 
+                            Text="{Binding Path=CustomersOrders/ShipCountry, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                           />
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <!-- Привязка к объекту с помощью класса ObjectDataProvider -->
+            <TabItem Header="Page4">
+                <TabItem.Resources>
+                    <ObjectDataProvider 
+                        x:Key="myObjectProvider"
+                        ObjectType="{x:Type local:MyObject}"
+                        MethodName="GetCollection" />
+                </TabItem.Resources>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center">ContactName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="0"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myObjectProvider},
+                                                  Path=Customers}"
+                            DisplayMemberPath="ContactName"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Center">OrderDate</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="1"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myObjectProvider},
+                                                  Path=Customers/CustomersOrders}"
+                            DisplayMemberPath="OrderDate"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center">ProductName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="2"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myObjectProvider},
+                                                  Path=Customers/CustomersOrders/Orders_Order_Details_Extended}"
+                            DisplayMemberPath="ProductName"
+                            />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Margin="0,0,5,0">ShipName:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" 
+                            Text="{Binding Source={StaticResource myObjectProvider}, 
+                                           Path=Customers/CustomersOrders/ShipName, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="1">ShipAddress:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" 
+                            Text="{Binding Source={StaticResource myObjectProvider}, 
+                                           Path=Customers/CustomersOrders/ShipAddress, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="2">ShipCity:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" 
+                            Text="{Binding Source={StaticResource myObjectProvider}, 
+                                           Path=Customers/CustomersOrders/ShipCity, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="3">ShipCountry:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" 
+                            Text="{Binding Source={StaticResource myObjectProvider}, 
+                                           Path=Customers/CustomersOrders/ShipCountry, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                           />
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <!-- Привязка к объекту с помощью класса ObjectDataProvider -->
+            <TabItem Header="Page5" Selector.IsSelected="True">
+                <TabItem.Resources>
+                    <XmlDataProvider
+                        x:Key="myDocument" 
+                        Source="Data/XmlDocument.xml" />
+                </TabItem.Resources>
+                <Grid DataContext="{Binding ElementName=listCustomers5, Path=SelectedItem}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center">ContactName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="0"
+                            Name="listCustomers5"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myDocument},
+                                                  XPath=NewDataSet/Customers}"
+                            DisplayMemberPath="ContactName"
+                            IsSynchronizedWithCurrentItem="True"
+                            />
+                        
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Center">CustomerID</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="1"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myDocument},
+                                                  XPath=NewDataSet/Orders}"
+                            DisplayMemberPath="CustomerID"
+                            />
+                        
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center">ProductName</TextBlock>
+                        <ListBox Grid.Row="1" Grid.Column="2"
+                            Margin="0,0,0,3"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            ItemsSource="{Binding Source={StaticResource myDocument},
+                                                  XPath=NewDataSet/Order_Details_Extended}"
+                            DisplayMemberPath="ProductName"
+                            />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Margin="0,0,5,0">CompanyName:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" 
+                            Text="{Binding XPath=CompanyName, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="1">Address:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" 
+                            Text="{Binding XPath=Address, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="2">City:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" 
+                            Text="{Binding XPath=City, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                            />
+                        
+                        <TextBlock Grid.Row="3">Country:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" 
+                            Text="{Binding XPath=Country, Mode=OneWay}"
+                            Focusable="False"
+                            Margin="5,0,0,0"
+                           />
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
+
